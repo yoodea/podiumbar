@@ -391,7 +391,7 @@
   <!-- ======= Шапка ======= -->
   <div style="padding:22px 20px 6px; display:flex; justify-content:space-between; align-items:center;">
     <div style="display:flex; align-items:center; gap:11px;">
-      <div style="width:40px; height:40px; border:1.5px solid #1B1813; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600;">P</div>
+      <div style="width:40px; height:40px; flex:none; border:1.5px solid #1B1813; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600;">P</div>
       <div style="display:flex; flex-direction:column; gap:1px;">
         <span style="font-weight:800; font-size:15px; letter-spacing:0.08em;">PODIUM BAR</span>
         <span style="font-size:10.5px; letter-spacing:0.14em; color:#8c7f68; text-transform:uppercase;">{{ t.tagline }}</span>
@@ -494,8 +494,8 @@
 
   <!-- ======= Плашка корзины ======= -->
   <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed; bottom:16px; left:50%; transform:translateX(-50%); width:min(398px, calc(100vw - 32px)); z-index:20; animation:sheetUp 0.25s ease;">
-      <button onclick="{{ openSheet }}" style="width:100%; cursor:pointer; border:none; background:#1B1813; color:#F6F2EA; border-radius:16px; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; font-family:Manrope,sans-serif; font-weight:700; font-size:15px; box-shadow:0 12px 28px rgba(27,24,19,0.3);" style-hover="background:#2c2820;">
+    <div style="position:fixed; bottom:16px; left:50%; transform:translateX(-50%); width:min(398px, calc(100vw - 32px)); z-index:20;">
+      <button onclick="{{ openSheet }}" style="width:100%; cursor:pointer; border:none; background:#1B1813; color:#F6F2EA; border-radius:16px; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; font-family:Manrope,sans-serif; font-weight:700; font-size:15px; box-shadow:0 12px 28px rgba(27,24,19,0.3); animation:sheetUp 0.25s ease;" style-hover="background:#2c2820;">
         <span>{{ t.cart }} · {{ cartCount }}</span>
         <span style="display:flex; align-items:baseline; gap:7px;"><span style="font-weight:800;">{{ totalStr }}</span><span style="font-size:10.5px; font-weight:500; color:#b0a894;">{{ t.withService }}</span></span>
       </button>
@@ -549,7 +549,7 @@
       <div style="width:100%; max-width:430px; height:100dvh; display:flex; flex-direction:column; color:#1B1813;">
         <div style="padding:22px 20px 14px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #E2DBCC;">
           <div style="display:flex; align-items:center; gap:11px;">
-            <div style="width:36px; height:36px; border:1.5px solid #1B1813; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600;">P</div>
+            <div style="width:36px; height:36px; flex:none; border:1.5px solid #1B1813; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600;">P</div>
             <div style="display:flex; flex-direction:column;">
               <span style="font-weight:800; font-size:14px; letter-spacing:0.08em;">PODIUM BAR</span>
               <span style="font-size:10.5px; letter-spacing:0.14em; color:#8c7f68; text-transform:uppercase;">{{ t.orderTitle }}</span>
@@ -590,7 +590,7 @@
     <div style="position:fixed; inset:0; z-index:50; display:flex; align-items:center; justify-content:center; padding:24px;">
       <div onclick="{{ closeNotice }}" style="position:absolute; inset:0; background:rgba(27,24,19,0.5); animation:fadeIn 0.2s ease;"></div>
       <div style="position:relative; width:100%; max-width:320px; background:#F6F2EA; border-radius:22px; padding:26px 24px 22px; display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center; animation:sheetUp 0.28s ease;">
-        <div style="width:46px; height:46px; border:1.5px solid #B8934A; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:21px; color:#B8934A;">%</div>
+        <div style="width:46px; height:46px; flex:none; border:1.5px solid #B8934A; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:21px; color:#B8934A;">%</div>
         <span style="font-size:17px; font-weight:800;">{{ t.service }} {{ servicePctStr }}</span>
         <span style="font-size:13.5px; color:#6d6553; line-height:1.55;">{{ serviceMsgStr }}</span>
         <button onclick="{{ closeNotice }}" style="width:100%; cursor:pointer; border:none; background:#1B1813; color:#F6F2EA; border-radius:12px; padding:13px; font-family:Manrope,sans-serif; font-size:14px; font-weight:700; margin-top:6px;" style-hover="background:#2c2820;">{{ t.ok }}</button>
