@@ -2,7 +2,8 @@
 
 Онлайн-меню ресто-бара PODIUM. Статический сайт: HTML + JS, без сервера.
 
-**Прод:** https://yoodea.github.io/podiumbar/
+**Прод:** https://podiumbar.vercel.app/ (Vercel)
+**Зеркало:** https://yoodea.github.io/podiumbar/ (GitHub Pages)
 
 ## Как редактировать меню
 
@@ -15,7 +16,7 @@
 
 Тексты интерфейса (три языка) — в `static T = {...}` там же.
 
-После правки: `git add -A && git commit -m "menu update" && git push` — сайт обновится за ~1 минуту.
+После правки: `git add -A && git commit -m "menu update" && git push` обновит зеркало на GitHub Pages, а `npx vercel deploy --prod --yes` — основной сайт на Vercel.
 
 ## Локальный запуск
 
